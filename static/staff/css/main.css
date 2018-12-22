@@ -1,0 +1,23 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.tables {
+	display: flex;
+	flex-direction: row;
+	width: 35%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tables a {
+	margin: 2px;
+	padding: 10px;
+	background-color: green;
+	flex-grow: 1;
+	width: 20px;
+	height: 20px;
+	text-decoration: none;
+	color: black;
+}

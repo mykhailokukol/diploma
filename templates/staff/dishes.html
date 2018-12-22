@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Блюда</title>
+</head>
+<body>
+	<div>
+		<a href="#">Напитки</a>
+		<a href="">Закуски</a>
+		<a href="">Салаты</a>
+		<a href="">Супы</a>
+		<a href="">Основные блюда</a>
+		<a href="">Гарниры</a>
+		<a href="">Десерты</a>
+		<a href="">Выпечка</a>
+		<a href="">Консервирование</a>
+		<a href="">Соусы</a>
+	</div>
+	<div class="all_dishes">
+		<table>
+			<thead>
+				<th>Название</th>
+				<th>Ингридиенты</th>
+				<th>Каллорийность</th>
+			</thead>
+			<tbody>
+			{% for dish in dishes %}
+				<tr>
+					<td>{{ dish.name }}</td>
+					<!-- если нет ингридиентов - не отображаются -->
+					<td>{% if dish.ingridients|length > 0 %}{{ dish.ingridients }}{% endif %}</td>
+					<td>{{ dish.calorie }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

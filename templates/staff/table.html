@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+</head>
+<body>
+	<div class="header">
+		
+	</div>
+	<div class="table_info">
+		<ul>
+			<li>Стол № {{ table.number }}</li>
+			<li>Зарезервирован? {{ table.is_reserved }}</li>
+			{% if table.is_reserved %}
+				<li>Дата и время резерва: {{ table.reserve_datetime }}</li>
+			{% endif %}
+		</ul>
+		<div>
+			<p>История заказов: </p>
+			<ul>
+			{% for dish in dishes %}
+				<li>{{ dish.name }}</li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

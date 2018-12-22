@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>reservation</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<th>Номер стола</th>
+			<th>Резерв</th>
+			<th>Дата и время резерва</th>
+		</thead>
+		<tbody>
+			{% for table in tables %}
+				<tr>
+					<td>{{ table.number }}</td>
+					<td>{{ table.is_reserved }}</td>
+					<td>{{ table.reserve_datetime }}</td>
+				</tr>
+			{% endfor %}		
+		</tbody>
+	</table>
+
+	
+</body>
+</html>

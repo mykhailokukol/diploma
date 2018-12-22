@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>staff main page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'staff/css/main.css' %}">
+</head>
+<body>
+	<div class="header">
+		<a href="#">main</a>
+		<a href="dishes/">блюда</a>
+		<a href="reservation/">бронь</a>
+		<a href="#">help</a>
+	</div>
+	<div class="tables">
+	{% for table in tables %}
+		<a href="/staff/table/{{ table.number }}">{{ table.number }}</a>
+	{% endfor %}
+</body>
+</html>
